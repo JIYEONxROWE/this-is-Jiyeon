@@ -1,4 +1,4 @@
-// 성능을 측정할 함수
+
 function exampleFunction() {
     let sum = 0;
     for (let i = 0; i < 1000000; i++) {
@@ -7,13 +7,10 @@ function exampleFunction() {
     return sum;
 }
 
-// 성능 측정 시작
 console.time('exampleFunction');
 
-// 함수 실행
 exampleFunction();
 
-// 성능 측정 종료
 console.timeEnd('exampleFunction');
 
 
@@ -126,6 +123,18 @@ function toggleTab(tabId) {
     });
 }
 
+window.onscroll = function() {
+    var spotifyIframe = document.querySelector('.spotify');
+    var gallery = document.querySelector('.gallery');
+    var galleryTop = gallery.getBoundingClientRect().top;
+    
+    if (galleryTop <= 0) {
+        spotifyIframe.classList.add('small');
+    } else {
+        spotifyIframe.classList.remove('small');
+    }
+};
+
 window.addEventListener('DOMContentLoaded', function() {
     var initial = document.querySelector('.header-text');
     var image = document.querySelector('.gallery');
@@ -170,6 +179,7 @@ window.addEventListener('DOMContentLoaded', function() {
         { name: 'Florida', count: 21 },
         { name: 'Newyork', count: 44},
         { name: 'La', count: 27},
+        { name: 'Chiangmai', count: 34},
         { name: 'Vietnam', count: 27 }
     ];
 
@@ -208,16 +218,15 @@ window.addEventListener('DOMContentLoaded', function() {
         modalWrap.style.display = "flex";
         modalBg.style.display = "block";
 
-        // 모달 창을 화면 중앙에 위치시킵니다.
         modalWrap.style.top = '50%';
         modalWrap.style.left = '50%';
         modalWrap.style.transform = 'translate(-50%, -50%)';
 
-        // 부드러운 페이드 인 효과를 추가합니다.
+
         setTimeout(function() {
             modalWrap.style.opacity = '1';
-            modalBg.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // 검은 배경 추가
-        }, 50); // 0.05초 후에 실행하여 부드럽게 보이도록 설정
+            modalBg.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; 
+        }, 50); 
     }
 
     // 모달 창 닫기 함수
