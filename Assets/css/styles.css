@@ -96,7 +96,7 @@ body, html {
 }
 
 .spotify.small {
-    width: 75px;
+    width: 73px;
     height: 76px;
     right: 25px;
 }
@@ -460,18 +460,26 @@ body, html {
     body, html {
         font-size: 14px;
     }
+
     .header-text {
         font-size: 8px;
     }
+
+    .spotify {
+        height: 60px;
+        width: 100%;
+    }
+
     .copy {
         font-size: 24px;
     }
     .gallery {
-        grid-template-columns: 1fr;
-        margin-top: 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 80px;
     }
     .footer {
         font-size: 12px;
+
     }
 }
 
@@ -487,7 +495,7 @@ body, html {
         font-size: 28px;
     }
     .gallery {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         margin-top: 70px;
     }
     .footer {
