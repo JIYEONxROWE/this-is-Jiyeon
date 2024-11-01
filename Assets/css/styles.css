@@ -461,20 +461,25 @@ body, html {
         font-size: 14px;
     }
 
+    .loader-content{
+        font-size: 20px;
+        left: 50%;
+    }
+
     .header-text {
         font-size: 8px;
     }
 
     .spotify {
-        height: 60px;
-        width: 100%;
+        height: 30px;
+        width: 40%;
     }
 
     .copy {
         font-size: 24px;
     }
     .gallery {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         margin-top: 80px;
     }
     .footer {
