@@ -467,7 +467,7 @@ body, html {
         left: 60%;
         transform: translate(-50%, -50%);
         display: flex;
-        width: 200px;
+        width: 170px;
         z-index: 10002; /* 가장 위로 올림 */
         color: #fff;
     }
@@ -477,8 +477,28 @@ body, html {
     }
 
     .spotify {
-        height: 30px;
-        width: 40%;
+        position: fixed;
+        top: 5px; 
+        right: 5px; 
+        transition: width 0.3s ease;
+    }
+    
+    .spotify.small {
+        width: 20px;
+        height: 20px;
+        right: 5px;
+    }
+    
+    .filter-buttons {
+        width: 20px;
+        height: 100%;
+        position: fixed;
+        top: 150px;
+        right: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 9993; /* loader 요소들보다 아래 */
     }
 
     .copy {
@@ -487,7 +507,9 @@ body, html {
     .gallery {
         grid-template-columns: 1fr 1fr;
         margin-top: 80px;
+        margin-right: 30px; 
     }
+
     .footer {
         font-size: 12px;
 
