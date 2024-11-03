@@ -461,9 +461,15 @@ body, html {
         font-size: 14px;
     }
 
-    .loader-content{
-        font-size: 20px;
-        left: 50%;
+    .loader-content {
+        position: absolute;
+        top: 40%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        width: 200px;
+        z-index: 10002; /* 가장 위로 올림 */
+        color: #fff;
     }
 
     .header-text {
